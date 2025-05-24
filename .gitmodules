@@ -1,0 +1,6 @@
+[submodule "groovy-backend"]
+	path = groovy-backend
+	url = https://github.com/aguiarsc/groovy-backend
+[submodule "groovy-frontend"]
+	path = groovy-frontend
+	url = https://github.com/aguiarsc/groovy-frontend

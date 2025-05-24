@@ -1,0 +1,40 @@
+services:
+  groovy-backend:
+    build: ./groovy-backend
+    container_name: groovy-backend
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: jdbc:h2:file:/app/data/groovydb;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+      DATABASE_USERNAME: sa
+      DATABASE_PASSWORD: password
+      JWT_SECRET: QE5jUmZValhuMnI1dTg3eC9BP0QoRytLYlBkU2dWb1k3cA==
+      JWT_EXPIRATION: "86400000"
+      STORAGE_LOCATION: /app/uploads
+      FRONTEND_URL: http://localhost:5173
+    volumes:
+      - groovy_data:/app/data
+      - groovy_uploads:/app/uploads
+    networks:
+      - groovy-network
+
+  groovy-frontend:
+    build:
+      context: ./groovy-frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8080
+    container_name: groovy-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - groovy-backend
+    networks:
+      - groovy-network
+
+networks:
+  groovy-network:
+    driver: bridge
+
+volumes:
+  groovy_data:
+  groovy_uploads:
