@@ -1,285 +1,181 @@
-# Groovy Music
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/27adf966-5e2f-4645-9f9a-ae003d7a0539" alt="Groovy Music Logo" />
+</p>
 
-<div align="center">
-
-  ![Image](https://github.com/user-attachments/assets/27adf966-5e2f-4645-9f9a-ae003d7a0539)
-  
-  <h3>🎵 A full-stack music streaming application built with Spring Boot and React 🎵</h3>
+<div>
+  <img src="https://github.com/user-attachments/assets/b01ef6e2-1eaf-46b5-9f89-ea5640d528ad" align="left"
+     alt="Groovy Favicon">
+    <img src="https://github.com/user-attachments/assets/b01ef6e2-1eaf-46b5-9f89-ea5640d528ad" align="right"
+     alt="Groovy Favicon">
+    <h1 align="center">Groovy Music</h1> 
+  <p align="center">🎵 A full‑stack music streaming application built with Spring Boot & React 🎵</p>
 </div>
 
+
+<p align="center">
+  <a href="#overview"><strong>Overview</strong></a> •
+  <a href="#features"><strong>Features</strong></a> •
+  <a href="#architecture"><strong>Architecture</strong></a> •
+  <a href="#tech-stack"><strong>Tech Stack</strong></a> •
+  <a href="#api-documentation"><strong>API Docs</strong></a> •
+  <a href="#deployment"><strong>Deployment</strong></a> •
+  <a href="#project-structure"><strong>Project Structure</strong></a> •
+  <a href="#acknowledgements"><strong>Acknowledgements</strong></a>
+</p>
+
+## 📝 Overview
+
+Groovy is a modern music streaming platform where listeners discover and enjoy tunes, and artists showcase their art. It features robust user management (regular, artist, admin), music & playlist handling, and an interactive player.
+
+> **Why Groovy?** Because music should be seamless, social, and soulful.
+
 ---
 
-## Overview
-
-Groovy is a modern music streaming platform that allows users to discover and enjoy music while providing artists with a platform to showcase their work. The application implements a robust user management system with different roles (regular user, artist, admin), comprehensive music management capabilities, playlist creation and sharing, and an interactive music player.
-
-This project demonstrates integration of various technologies and architectural patterns to build a complete, production-ready web application with a focus on user experience and performance.
-
-### Project Components
-
-- **Backend**: REST API built with Spring Boot
-- **Frontend**: React SPA with modern UI
-- **Database**: H2 persistent in-memory database
-- **Authentication**: JWT-based secure authentication and authorization
-- **Media Storage**: File-based storage system for audio files and images
-
----
-
-## Key Features
+## ✨ Features
 
 ### For Listeners
-- **🎵 Music Streaming**: Audio streaming with an intuitive player
-- **📚 Library Management**: Create and organize personal music libraries
-- **🔀 Playlist Creation**: Build and discover playlists
-- **❤️ Favorites System**: Mark songs as favorites for quick access
-- **🔍 Advanced Search**: Find music by artist, album, or song title
-- **👥 User Profiles**: Personalized profiles
+
+* **🎵 Music Streaming**: Intuitive audio player with controls.
+* **📚 Library Management**: Organize your personal music collection.
+* **🔀 Playlist Creation**: Build, explore, and share playlists.
+* **❤️ Favorites**: Mark songs for quick access.
+* **🔍 Advanced Search**: Filter by artist, album, or track.
+* **👥 Profiles**: Customize and view user profiles.
 
 ### For Artists
-- **📂 Music Upload**: Upload and manage songs and albums
-- **📊 Artist Dashboard**: Keep control of your art
-- **👁️ Profile Management**: Create and update artist profiles with bio and images
+
+* **📂 Music Upload**: Add and manage your songs & albums.
+* **📊 Dashboard**: Insights and statistics on your content.
+* **👁️ Profile Management**: Update bios and images.
 
 ### For Administrators
-- **👮 User Management**: Manage user accounts and roles
-- **🎭 Content Moderation**: Review and moderate uploaded content
-- **📏 System Configuration**: Configure system parameters and policies
+
+* **👮 User Management**: Grant roles, review accounts.
+* **🎭 Content Moderation**: Approve or reject uploads.
+* **📏 System Configuration**: Tweak policies and settings.
 
 ---
 
-## Architecture
-
-Groovy employs a modern, scalable architecture:
+## 🏗️ Architecture
 
 ```
-                            ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-                            │                 │     │                 │     │                 │
-                            │  React Frontend │◄────┤  Spring Backend │◄────┤  H2 Database    │
-                            │                 │     │                 │     │                 │
-                            └────────┬────────┘     └────────┬────────┘     └─────────────────┘
-                                     │                       │
-                                     │                       │
-                                     ▼                       ▼
-                            ┌─────────────────┐     ┌─────────────────┐
-                            │                 │     │                 │
-                            │  User Interface │     │  File Storage   │
-                            │                 │     │                 │
-                            └─────────────────┘     └─────────────────┘
++-----------------+     +-----------------+     +-----------------+
+| React Frontend  | <-- | Spring Backend  | <-- |   H2 Database   |
++--------+--------+     +--------+--------+     +--------+--------+
+         |                       |                       
+         v                       v                       
++-----------------+     +-----------------+               
+| User Interface  |     | File Storage    |               
++-----------------+     +-----------------+               
 ```
 
-### Architectural Patterns
-
-1. **Client-Server Architecture**: Clear separation of frontend and backend
-2. **RESTful API**: Well-defined API for all system operations
-3. **MVC Pattern**: Model-View-Controller pattern in the backend
-4. **Repository Pattern**: Data access abstraction
-5. **Component-Based Architecture**: Reusable UI components in the frontend
-6. **Flux Architecture**: Unidirectional data flow using Zustand store
-7. **JWT Authentication**: Stateless authentication mechanism
+1. **Client-Server**: Decoupled frontend & backend.
+2. **RESTful API**: Clean, versioned endpoints.
+3. **MVC & Repository**: Backend design patterns.
+4. **Component-Based**: Reusable UI in React.
+5. **Flux (Zustand)**: Predictable data flow.
+6. **JWT Auth**: Stateless security.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Backend
-- **Java 17**
-- **Spring Boot 3.x**: Web application framework
-- **Spring Security**: Authentication and authorization
-- **Spring Data JPA**: Data persistence
-- **H2 Database**: In-memory SQL database
-- **Lombok**: Boilerplate code reduction
-- **JWT**: JSON Web Tokens for stateless authentication
-- **OpenAPI/Swagger**: API documentation
-- **Maven**: Dependency management and build
+<details>
+<summary>🔍 Click to Expand</summary>
 
-### Frontend
-- **React 18**: UI library
-- **TypeScript**: Type-safe JavaScript
-- **React Router**: Client-side routing
-- **Zustand**: State management
-- **TanStack Query**: Data fetching and caching
-- **Axios**: HTTP client
-- **Tailwind CSS**: Utility-first CSS framework
-- **React Icons**: Icon library
-- **Vite**: Build tool and development server
+### **Backend**
 
-### DevOps & Tools
-- **Docker**: Containerization
-- **Nginx**: Web server for production deployment
-- **Git**: Version control
-- **H2 Console**: Database management interface
+* Java 17 · Spring Boot 3.x · Spring Security · JPA · H2 · Lombok · JWT · Swagger · Maven
+
+### **Frontend**
+
+* React 18 · TypeScript · React Router · Zustand · TanStack Query · Axios · Tailwind CSS · React Icons · Vite
+
+### **DevOps & Tools**
+
+* Docker · Docker Compose · Nginx · Git · H2 Console
+
+</details>
 
 ---
 
-## API Documentation
+## 📚 API Documentation
 
-The backend API is documented using OpenAPI/Swagger.
+> Available when the backend is running:
 
-- **Swagger UI**: Available at http://localhost:8080/swagger-ui.html when the backend is running
-- **OpenAPI Spec**: Available at http://localhost:8080/v3/api-docs
+* **Swagger UI**: `http://localhost:8080/swagger-ui.html`
+* **OpenAPI Spec**: `http://localhost:8080/v3/api-docs`
 
-### API Endpoints Overview
-
-| Category        | Endpoints                              | Description                               |
-|-----------------|----------------------------------------|-------------------------------------------|
-| Authentication  | `/api/auth/*`                          | User registration, login, token refresh   |
-| Users           | `/api/users/*`                         | User profiles and management              |
-| Songs           | `/api/songs/*`                         | Song CRUD and streaming                   |
-| Albums          | `/api/albums/*`                        | Album management                          |
-| Artists         | `/api/artists/*`                       | Artist profiles and content               |
-| Playlists       | `/api/playlists/*`                     | Playlist creation and management          |
-| Favorites       | `/api/favorites/*`                     | User favorites functionality              |
-| Files           | `/api/files/*`                         | File upload and management                |
-| Admin           | `/api/admin/*`                         | Administrative operations                 |
-
-For complete details, refer to the Swagger documentation when the backend is running.
+|       Category | Endpoint           | Description                     |
+| -------------: | :----------------- | :------------------------------ |
+| Authentication | `/api/auth/*`      | Register, login, refresh tokens |
+|          Users | `/api/users/*`     | Profile & account management    |
+|          Songs | `/api/songs/*`     | CRUD + streaming                |
+|         Albums | `/api/albums/*`    | Album operations                |
+|        Artists | `/api/artists/*`   | Artist profiles & content       |
+|      Playlists | `/api/playlists/*` | Create & manage playlists       |
+|      Favorites | `/api/favorites/*` | Favorite songs                  |
+|          Files | `/api/files/*`     | Upload & management             |
+|          Admin | `/api/admin/*`     | Admin operations                |
 
 ---
 
-## User Journeys
+## 🚀 Deployment
 
-### As a Listener
-
-1. **Registration and Onboarding**:
-   - Register a new account
-   - Complete profile setup
-   - Browse featured content on the homepage
-
-2. **Music Discovery**:
-   - Browse albums and artists
-   - Search for specific songs
-   - Explore curated playlists
-
-3. **Playlist Management**:
-   - Create personal playlists
-   - Add/remove songs from playlists
-   - Share playlists with others
-
-4. **Listening Experience**:
-   - Stream songs with the player
-   - Use player controls (play/pause, skip, volume)
-   - View song information in fullscreen mode
-   - Mark songs as favorites
-
-### As an Artist
-
-1. **Artist Registration**:
-   - Register as an artist
-   - Complete artist profile with bio and images
-
-2. **Content Management**:
-   - Upload songs and create albums
-   - Edit song metadata and album information
-   - Manage content visibility
-
-### As an Administrator
-
-1. **User Management**:
-   - View and manage user accounts
-   - Modify user roles
-   - Handle account issues
-
-2. **Content Moderation**:
-   - Review uploaded content
-   - Approve or reject submissions
-   - Manage content violations
-
----
-
-## Security Implementation
-
-Groovy implements a comprehensive security model:
-
-### Authentication
-- **JWT-based** authentication system
-- Token generation, validation, and refresh mechanisms
-- Secure password storage with BCrypt encoding
-
-### Authorization
-- **Role-based access control** (USER, ARTIST, ADMIN)
-- Method-level security with Spring Security
-- Protected API endpoints
-
-### Data Security
-- Input validation on all API endpoints
-- Protection against common web vulnerabilities (CSRF, XSS)
-- Secure handling of sensitive user data
-
-### API Security
-- CORS configuration for frontend-backend communication
-- Rate limiting for API endpoints
-- Proper error handling with controlled information exposure
-
----
-
-## Deployment
-
-It is highly recommended to just use this link
-
-https://groovymusic.onrender.com
+**Live Demo:** [groovymusic.onrender.com](https://groovymusic.onrender.com)
 
 ### Prerequisites
 
-  1. Install Docker and Docker Compose
-  2. Install Git
+1. [Docker](https://www.docker.com/) & Docker Compose
+2. [Git](https://git-scm.com/)
 
-### Installation
+### Quick Start
 
-  1. Clone this repository and its submodules. Navigate to it.
+```bash
+# Clone & enter repo
+git clone --recurse-submodules https://github.com/aguiarsc/groovy
+cd groovy
 
-  ``` bash
-    git clone --recurse-submodules https://github.com/aguiarsc/groovy
-    cd groovy
-  ```
+# Build & run
+docker-compose up --build
+```
 
-### Do magic
+**Access:** `http://localhost:5173`
 
-  ``` bash
-    docker-compose up --build
-  ```
+*Use provided credentials in project upload.*
 
-### Enjoy!
+<details>
+<summary>🔧 Troubleshooting Commands</summary>
 
-  1. Go to http://localhost:5173
-  2. Use the credentials given in the Moodle project upload.
+```bash
+docker-compose down
+docker-compose up --build --remove-orphans
+```
 
-#### Useful commands for troubleshooting
-
-  ``` bash
-    docker-compose down
-    docker compose up --build --remove-orphans
-  ```
+</details>
 
 ---
 
-## Project Structure
-
-The project follows a modular structure:
+## 📂 Project Structure
 
 ```
 groovymusic/
 ├── groovy-backend/      # Spring Boot backend
 │   ├── src/             # Source code
 │   ├── uploads/         # Media storage
-│   └── README.md        # Backend documentation
-│
+│   └── README.md        # Backend docs
 ├── groovy-frontend/     # React frontend
 │   ├── src/             # Source code
 │   ├── public/          # Static assets
-│   └── README.md        # Frontend documentation
-│
-├── docker-compose.yml   # Development docker setup
+│   └── README.md        # Frontend docs
+├── docker-compose.yml   # Docker setup
 └── README.md            # This file
 ```
 
-### Detailed Structure Documentation
-For comprehensive structure details, see the backend and frontend READMEs.
-
 ---
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-- All music and artist content is provided for educational purposes. This web will never be commercial but instead a study-case.
-- All music and artist content rights belong to themselves.
-- Icon libraries: React Icons, Font Awesome
-- Design inspiration: Spotify, Apple Music
+* Educational content: All music & artist rights retained by original owners.
+* Icons & design: React Icons, Font Awesome.
+* Inspiration: Spotify & Apple Music.
