@@ -7,18 +7,6 @@
   <h3>🎵 A full-stack music streaming application built with Spring Boot and React 🎵</h3>
 </div>
 
-<p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#key-features">Key Features</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#api-documentation">API</a> •
-  <a href="#user-journeys">User Journeys</a> •
-  <a href="#security-implementation">Security</a> •
-  <a href="#project-structure">Structure</a> •
-  <a href="#license">License</a>
-</p>
-
 ---
 
 ## Overview
@@ -226,21 +214,41 @@ Groovy implements a comprehensive security model:
 
 ## Deployment
 
-### Containerization
-Groovy is containerized using Docker, with separate containers for:
-- Frontend (Nginx + React)
-- Backend (Spring Boot)
+It is highly recommended to just use this link
 
-### Production Considerations
-- **Environment Variables**: Configuration via environment variables
-- **Persistence**: Volume mapping for data persistence
-- **SSL/TLS**: HTTPS configuration for production
-- **Reverse Proxy**: Nginx configuration for routing
-- **Monitoring**: Health check endpoints
+https://groovymusic.onrender.com
 
-### Deployment Options
-- **Manual Deployment**: Step-by-step guide in respective READMEs
-- **Docker Compose**: Single-command deployment with docker-compose
+### Prerequisites
+
+  1. Install Docker and Docker Compose
+  2. Install Git
+
+### Installation
+
+  1. Clone this repository and its submodules. Navigate to it.
+
+  ``` bash
+    git clone --recurse-submodules https://github.com/aguiarsc/groovy
+    cd groovy
+  ```
+
+### Do magic
+
+  ``` bash
+    docker-compose up --build
+  ```
+
+### Enjoy!
+
+  1. Go to http://localhost:5173
+  2. Use the credentials given in the Moodle project upload.
+
+#### Useful commands for troubleshooting
+
+  ``` bash
+    docker-compose down
+    docker compose up --build --remove-orphans
+  ```
 
 ---
 
@@ -269,22 +277,9 @@ For comprehensive structure details, see the backend and frontend READMEs.
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
 ## Acknowledgements
 
 - All music and artist content is provided for educational purposes. This web will never be commercial but instead a study-case.
 - All music and artist content rights belong to themselves.
-- This project is production-ready with secured env variables. You will not be able to run locally this project. 
 - Icon libraries: React Icons, Font Awesome
 - Design inspiration: Spotify, Apple Music
-
----
-
-<div align="center">
-  <p>🎵 Developed as a final grade project for DAW course 🎵</p>
-</div>
