@@ -23,7 +23,7 @@
   <a href="#acknowledgements"><strong>Acknowledgements</strong></a>
 </p>
 
-## 📝 Overview
+## Overview
 
 Groovy is a modern music streaming platform where listeners discover and enjoy tunes, and artists showcase their art. It features robust user management (regular, artist, admin), music & playlist handling, and an interactive player.
 
@@ -31,7 +31,7 @@ Groovy is a modern music streaming platform where listeners discover and enjoy t
 
 ---
 
-## ✨ Features
+## Features
 
 ### For Listeners
 
@@ -56,7 +56,7 @@ Groovy is a modern music streaming platform where listeners discover and enjoy t
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 +-----------------+     +-----------------+     +-----------------+
@@ -78,7 +78,7 @@ Groovy is a modern music streaming platform where listeners discover and enjoy t
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <details>
 <summary>🔍 Click to Expand</summary>
@@ -99,7 +99,7 @@ Groovy is a modern music streaming platform where listeners discover and enjoy t
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 > Available when the backend is running:
 
@@ -120,7 +120,7 @@ Groovy is a modern music streaming platform where listeners discover and enjoy t
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 **Live Demo:** [groovymusic.onrender.com](https://groovymusic.onrender.com)
 
@@ -156,7 +156,7 @@ docker-compose up --build --remove-orphans
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 groovymusic/
@@ -174,8 +174,6 @@ groovymusic/
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 * Educational content: All music & artist rights retained by original owners.
-* Icons & design: React Icons, Font Awesome.
-* Inspiration: Spotify & Apple Music.
